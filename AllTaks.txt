@@ -1,0 +1,4470 @@
+   
+                                                   date : 16/07/2024
+                                                ----------------------
+
+1]...public class AllOperators 
+{
+	   int l;
+	   AllOperators(int l)
+	{
+	  System.out.println("new operator :"+l+"\n");
+          this.l=l;
+	}	
+	public void arithmeticOperator()
+	{
+		int a=10;
+		int b=20;
+		System.out.println("arthmetic operator");
+		System.out.println(a+b);
+		System.out.println(a-b);
+		System.out.println(a%b);      //arithmetic opeartors
+		System.out.println(a/b);
+		
+	}
+	public static void logicalOperator()
+	{
+		System.out.println("Logical operator"+"\n");
+		int a=10;
+		int b=20; 
+		int c=30;                       //logcal operator
+		if(a>b&&a>c)
+		{
+			System.out.println(a+"a is big");
+		}
+		else if(b>a&&b>c)
+		{
+			System.out.println(b+"b is big");
+		}
+		else
+		{
+			System.out.println( "  c is big   "+c);
+		}
+	}
+	    public void condintionalOperator()
+	    {
+	    	System.out.println("Conditional operator"+"\n");
+	    	int a=10;                    //Ternory operator
+	    	int b=20;
+	    	String result=a<b?"a is small:":"b is small";
+	    	System.out.println(result);
+	    }
+	    public static void relationalOperator()
+	    {
+	    	int a=10;
+	    	int b=20;    //relational operotors
+	    	System.out.println("relational operator"+"\n");
+	    	System.out.println(a==b);
+	    	System.out.println(a>b);
+	    	System.out.println(a>=b);
+	    	System.out.println(a<=b);
+	    	System.out.println(a!=b);
+	    	
+	    	
+	    }
+	   public void unaryOperator()
+	   {
+		   int x=10;              //unary operators
+		   System.out.println("unary operator"+"\n");
+		   System.out.println(++x);
+		   System.out.println(x--);
+	   }
+	
+
+}
+
+public class AlloperatorTest {
+
+	public static void main(String[] args) {
+		AllOperators r=new AllOperators(200);//new operator
+		if(r instanceof AllOperators )  //instanceoperator
+		{
+			System.out.println("instanceoperator");
+			System.out.println("r is reference of string"+"\n");
+		}
+		    r.arithmeticOperator();
+		    r.condintionalOperator();
+		    r.unaryOperator();
+		    
+		    AllOperators.logicalOperator(); //with classname && member operator
+		    AllOperators.relationalOperator();
+		    
+	}
+
+}
+  OUTPUT
+new operator :200
+
+instanceoperator
+r is reference of string
+
+arthmetic operator
+30
+-10
+10
+0
+Conditional operator
+
+a is small:
+unary operator
+
+11
+11
+Logical operator
+
+  c is big   30
+relational operator
+
+false
+false
+false
+true
+true
+----------------------------------------------------------------------------------------------------------
+                                                          DATE:15/07/2024
+2]...package com.techsoft.SpringAnno;
+import java.util.Scanner;
+//import java.util.Scanner;
+import java.util.Scanner.*;
+
+public class Lottery {
+	    public static void main(String[] args) {
+	    	Scanner sc=new Scanner(System.in);
+	    	System.out.println("a value");
+				        int a=sc.nextInt();
+				        System.out.println("b value");
+				        
+				        int b=sc.nextInt();
+				        System.out.println("c 7value");
+				        int c=sc.nextInt();				        
+				        int result = checkTicket(a, b, c);
+				        System.out.println("Result: " + result);
+				    }
+				    public static int checkTicket(int a, int b, int c) {
+				    	
+				        int ab = a + b;
+				        int bc = b + c;
+				        int ac = a + c;
+				        
+				        if (ab == 10 || bc == 10 || ac == 10) {
+				            return 10;
+				        }
+				        else if (ab == bc + 10 || ab == ac + 10) {
+				            return 5;
+				        }  
+				        else {
+				            return 0;
+				        }
+				    }
+				}
+OUTPUT
+-----
+a value
+2
+b value
+4
+c 7value
+6
+Result: 10
+------------------------------------------------------------------------------------------------------
+ 3]...                                                                 date:16/07/2024
+public class Fuzz{
+public static void main(String[] args) {
+	for(int i=1;i<=20;i++)
+	{
+		if(i%3==0&&i%5==0)
+			System.out.println("FizzBuzz");
+		else if(i%3==0)
+			System.out.println("Fizz");
+		else if(i%5==0)
+			System.out.println("Buzz");
+		else
+			System.out.println(i);
+	}
+}
+}
+OUTPUT:
+1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+FizzBuzz
+16
+17
+Fizz
+19
+Buzz
+-------------------------------------------------------------------------------------------------
+4th program:
+-----------                                                                             date:17/07/2024
+//reverse number using while
+package fushion5;
+
+public class ReverseNumber {
+
+	public static void main(String[] args) {
+		int n=123;
+		int rev=0;
+	while(n>=1)
+	{
+	 	int temp=n%10;
+		rev=rev*10+temp;
+		n=n/10;
+	}
+	System.out.println(rev);
+		// TODO Auto-generated method stub
+
+	}
+
+}
+output
+------
+321
+------------------------------------------------------------------------------------------------------------
+   5th program
+--------------                                                                      18/07/2024
+                                                                        -----------
+/ MAXIMUM NUMBER FIND
+package fushion5;
+
+public class Largest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int m[]= {3,4,5,1};
+		int max=m[0];
+		for(int i=0;i<m.length;i++)
+		{
+			if(m[i]>max)
+				max=m[i];	
+		}
+		System.out.println(max);
+		
+
+	}
+
+}
+OUTPUT
+------
+5
+------------------------------------------------------------------------------------------------------------                             
+                                                                           17/06/2024
+  6th program
+-------------      / ASSECENDING AND DISCENDIND ORDER IN AN ARRAY                    -------------
+
+public class ArraySorting
+{
+public static void main(String[] args)
+{
+		int l[]= {3,2,1,4,5};
+		
+		 
+		int temp=0;
+		
+        for(int i=0;i<l.length;i++)  //checking the value ietaration
+		{
+		  for(int j=i+1;j<l.length;j++)//checking index position
+		    {	
+		    	if(l[i]<l[j])      || if(l[i]>l[j])
+						{
+					    temp=l[i];
+				         l[i]=l[j];
+				         l[j]=temp;			
+						}
+		    }
+		  System.out.println("after sorting of :"+l[i]);
+     }
+		
+}
+}
+OUTPUT
+after sorting of :5||  after sorting of 1
+after sorting of :4||  after sorting of 2
+after sorting of :3||  after sorting 0f 3
+after sorting of :2||  after sorting of 4
+after sorting of :1||  after sorting of 5
+---------------------------------------------------------------------------------------------------------
+ 7th pr0gram
+-------------
+package fushion5;                                                     18/07/2024
+                                                                     ------------
+public class LargeIndex {
+
+	public static void main(String[] args) {
+		
+		        int[] array = {10, 20, 30, 40, 50};
+		        int largestIndex = array.length - 1;
+		        int largestValue = array[largestIndex];
+
+		        System.out.println("The largest index position is: " + largestIndex);
+		        System.out.println("The value at the largest index position is: " + largestValue);
+		
+
+		    }
+		}
+
+	
+
+output
+--------
+The largest index position is: 4
+The value at the largest index position is: 50
+------------------------------------------------------------------------------------------------------------        
+package fushion5;                                              22/07/2024
+
+public class Student2 {
+		    private int studentId;
+		    private String studentName;
+		    private int marks;
+		    private char grade;
+		    public Student2() {
+		    	System.out.println("non para");
+		    }
+
+		    public Student2(int studentId, String studentName, int marks) {
+		    	System.out.println("para");
+		        this.studentId = studentId;
+		        this.studentName = studentName;
+		        this.marks = marks;
+		        
+		        calculateGrade();
+		    }
+
+		    public void calculateGrade() {
+		        if (marks > 90) {
+		            grade = 'A';
+		        } else if (marks >= 81) {
+		            grade = 'B';
+		        } else if (marks >= 71) {
+		            grade = 'C';
+		        } else if (marks >= 61) {
+		            grade = 'D';
+		        } else {
+		            grade = 'E';
+		        }
+		    }
+
+		    public String displayDetails() {
+		        return "Student [name=" + studentName + ", studentId=" + studentId + ", marks=" + marks + ", grade=" + grade + "]";
+		    }
+		    public static void main(String[] args) {
+		      
+		        Student2 student1 = new Student2(123, "John Smith", 95); 
+
+		       
+		        System.out.println(student1.displayDetails());
+		    }
+		}
+
+output
+-------
+para
+Student [name=John Smith, studentId=123, marks=95, grade=A]
+---------------------------------------------------------------------------------------------------------
+                                                               23/07/24
+
+package fushion5;
+import java.util.Scanner;
+
+public class RoundedSumCalculator {
+	
+	 public static void main(String[] args) {
+		 Scanner sc=new Scanner(System.in);
+		 System.out.println("enter a value");
+		 int a=sc.nextInt();
+		 System.out.println("enter b value");
+		 int b=sc.nextInt();
+		 System.out.println("enter c value");
+		 int c=sc.nextInt();                    
+		 int sum= roundToNearestTen(a)+roundToNearestTen(b)+roundToNearestTen(c);
+			     	        
+			        System.out.println("Nearest rounded integer to 10 is: " + sum);
+			    }
+
+	    public static int roundToNearestTen(int l)
+	    {
+			        return ((l+5 ) / 10) * 10;
+			    }
+			
+
+}
+
+output
+------
+enter a value
+45
+enter b value
+67
+enter c value
+89
+Nearest rounded integer to 10 is: 210
+--------------------------------------------------------------------------------------------------------------                                  24/07/2024
+package fushion5;
+import java.util.Scanner;
+public class SumTwo {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter number");
+		int num=sc.nextInt();
+		int sum=0;
+		while(num>0)
+		{
+			int rem=num%10;
+			sum=sum+rem;
+			num=num/10;
+			
+		}
+		System.out.println("sum of that number is"+sum);
+		
+
+	}
+
+}
+output
+------
+enter number
+35
+sum of that number is8
+---------------------------------------------------------------------------
+package fushion5;                                                  24/07/2024
+                                                                   ------------
+import java.util.Scanner;
+
+public class ProductTwo {
+
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter number");
+		int num=sc.nextInt();
+		int product=1;
+		while(num>0)
+		{
+			int rem=num%10;
+			product=product*rem;
+			num=num/10;
+			
+		}
+		System.out.println(" product of that number is"+product);
+		
+
+	}
+
+
+}
+output
+-------
+enter number
+35
+ product of that number is15
+---------------------------------------------------------------------------------------------------------------                                                               date:25/07/2024               
+                                                                  ---------------
+bank pbm
+package fushion5;
+public class Customer {
+
+	private long salary=20000;
+	public void deposit(long amount)
+	{
+		if(amount<=0)
+		{
+			System.out.println("insufficient");
+		}
+		else
+		{
+			salary=salary+amount;
+			System.out.println("deposit successfully   :"+salary);
+		}
+	}
+	public void withdraw(long amount)
+	{
+		if(amount>=0)
+		{
+			salary=salary-amount;
+			System.out.println("withdrawl succesfully : "+salary);
+		}
+		else
+		{
+			
+			System.out.println("withdrwal not successful"+salary);
+			
+		}
+	}
+	
+	public static void main(String[] args) {
+
+		Customer c=new Customer();
+		
+		c.deposit(2000);
+		c.withdraw(1000);
+
+	}
+
+}
+output
+------
+deposit successfully   :22000
+withdrawl succesfully : 21000
+-------------------------------------------------------------------------------------------------------------            constructors and encapsulation pgm
+                ------------                                                     date: 25/07/2024
+   package fushion5;
+
+public class ATM1 {
+	 private int atmPin;
+	
+
+	public int getAtmPin() {
+		return atmPin;
+	}
+
+	public void setAtmPin(int atmPin) {
+		this.atmPin = atmPin;
+	}
+	
+	int change;
+	ATM1(int change)
+	{
+		this.change=change;
+		System.out.println("para");
+//		System.out.println(change);
+	}
+	int valueChange;
+	ATM1()
+	{
+		valueChange=valueChange;
+		System.out.println("non para");
+//		System.out.println(valueChange);
+	}
+	
+
+	@Override
+	public String toString() {
+		return "ATM1 [atmPin=" + atmPin + "]";
+	}
+	
+
+}
+package fushion5;
+
+public class TestAtm {
+
+	public static void main(String[] args) {
+		ATM1 g=new ATM1(66);  // argument constuctor
+		System.out.println(g.change);
+		ATM1 g1=new ATM1();  //no argument constructor
+	System.out.println(g1.valueChange);
+		g1.setAtmPin(678);       
+		System.out.println(g1);   //encapsulation
+		
+	}
+
+}
+output
+------
+para
+66
+non para
+0
+ATM1 [atmPin=678]
+-----------------------------------------------------------------------------------------------------------
+                                                                                 date:29/07/2024
+     WITH USING CONSTRUCTOR
+--------------------------
+package fushion5;
+
+public class Company {
+	 private String CmpName;
+	 private String address;
+	Company(String CmpName,String address)
+	{
+		this.CmpName=CmpName;
+		this.address=address;
+	}
+	public String getCmpName() {
+		return CmpName;
+	}
+	
+	public String getAddress() {
+		return address;
+	}
+	
+	
+	}
+package fushion5;
+
+public class Employee {
+	
+    Company c;
+    
+    public Employee(Company c)
+    {
+    	this.c=c;
+    }
+	public void display()
+	{
+		System.out.println(c.getCmpName());
+		System.out.println(c.getAddress());
+	}
+
+}
+package fushion5;
+
+public class TestCompany {
+
+	public static void main(String[] args) {
+		Company d=new Company("Fusion","Gachhibouli");
+//		System.out.println(d);
+		Employee e=new Employee(d);
+		e.display();
+
+	}
+
+}
+output
+------
+Fusion
+Gachhibouli
+---------------------------------------------------------------------------------------------------------
+  WITHOUT USING CONSTRUCTOR
+----------------------------
+package fushion5;
+
+public class Company {
+	 private String CmpName;
+	 private String address;
+	public String getCmpName() {
+		return CmpName;
+	}
+	public void setCmpName(String cmpName) {
+		CmpName = cmpName;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	
+	
+	}
+	
+package fushion5;
+
+public class Employee {
+	
+    Company c;
+
+	public Employee(Company c) {
+		super();
+		this.c = c;
+	}
+
+	public void display()
+	{
+		System.out.println(c.getCmpName());
+		System.out.println(c.getAddress());
+	}
+
+}
+package fushion5;
+
+public class TestCompany {
+
+	public static void main(String[] args) {
+		Company d=new Company();
+		d.setCmpName("TCS");
+		d.setAddress("HYD");
+//	System.out.println(d);
+		Employee e=new Employee(d);
+		e.display();
+
+	}
+
+}
+OUTPUT
+------
+TCS
+HYD
+---------------------------------------------------------------------------------------------------------------------
+
+   using to string methods
+---------------------------
+package fushion5;
+
+public class Company {
+	 private String CmpName;
+	 private String address;
+	public String getCmpName() {
+		return CmpName;
+	}
+	public void setCmpName(String cmpName) {
+		CmpName = cmpName;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	@Override
+	public String toString() {
+		return "Company [CmpName=" + CmpName + ", address=" + address + "]";
+	}
+	
+	
+	}
+	package fushion5;
+
+public class Employee {
+	
+    Company c;
+
+	public Employee(Company c) {
+		super();
+		this.c = c;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [c=" + c + "]";
+	}
+
+	
+}
+package fushion5;
+
+public class TestCompany {
+
+	public static void main(String[] args) {
+		Company d=new Company();
+		d.setCmpName("wipro");
+		d.setAddress("Bengulur");
+//	System.out.println(d);
+		Employee e=new Employee(d);
+		System.out.println(e);
+		
+
+	}
+
+}
+output
+-------
+Employee [c=Company [CmpName=wipro, address=Bengulur]]
+------------------------------------------------------------------------------With using constructor and using getmethod only
+-------------------------------------------------package fushion5;
+
+public class Mother {
+	private String MotherName;
+
+	public Mother(String motherName) {
+		super();
+		MotherName = motherName;
+	}
+
+	public String getMotherName() {
+		return MotherName;
+	}
+	
+
+}
+package fushion5;
+
+public class Son {
+String sName;                                             
+                                 //                         didnot take constructor here
+	Mother m;
+	public void display(String Sname,Mother m)
+	{
+		
+		System.out.println("Son Name is :"+Sname);
+		System.out.println("Mom Name is :"+m.getMotherName());
+	}
+	
+
+	
+}
+package fushion5;
+
+public class M {
+
+	public static void main(String[] args) {
+		
+		Mother l=new Mother("Adilakshmi");
+		
+	Son s=new Son();
+		
+	s.display("Ramesh",l);
+	
+	}
+
+}
+output
+-------
+Son Name is :Ramesh
+Mom Name is :Adilakshmi
+-------------------------------------------------------------------------------without using constructor apply setters and getters methods
+package fushion5;
+
+public class Mother {
+	private String MotherName;
+
+	public String getMotherName() {
+		return MotherName;
+	}
+
+	public void setMotherName(String motherName) {
+		MotherName = motherName;
+	}
+}
+package fushion5;
+
+public class Son {
+String sName;                                             
+                                 //                         didnot take constructor here
+	Mother m;
+							
+	public void display(String sName, Mother m)
+	{	
+System.out.println("Mom Name is :"+m.getMotherName());
+System.out.println("Son Name is :"+sName);
+	}	
+}
+package fushion5;
+
+public class M {
+
+	public static void main(String[] args) {
+		
+		Mother l=new Mother();
+		l.setMotherName("Adilakshmi");		
+	Son s=new Son();
+		
+	s.display("Ramesh",l);
+	
+	}
+
+}
+output
+-------
+Mom Name is :Adilakshmi
+Son Name is :Ramesh
+-------------------------------------------------------------------------------with using to string 
+----------------
+package fushion5;
+
+public class Mother {
+	private String MotherName;
+
+	public String getMotherName() {
+		return MotherName;
+	}
+
+	public void setMotherName(String motherName) {
+		MotherName = motherName;
+	}
+
+	@Override
+	public String toString() {
+		return "Mother [MotherName=" + MotherName + "]";
+	}	
+
+}
+package fushion5;
+
+public class Son {
+String sName;                                             
+                                 //                         didnot take constructor here
+	Mother m;
+	public void display(String Sname,Mother m)
+	{
+		
+		System.out.println("Son Name is :"+Sname);
+		System.out.println("Mom Name is :"+m.getMotherName());
+	}
+	@Override
+	public String toString() {
+		return "Son [sName=" + sName + ", m=" + m + "]";
+	}
+	
+}
+package fushion5;
+
+public class M {
+
+	public static void main(String[] args) {
+		
+		Mother l=new Mother();
+		l.setMotherName("Adilakshmi");
+		
+	Son s=new Son();
+		
+	s.display("Ramesh",l);
+	
+	}
+
+}
+output
+------
+Son Name is :Ramesh
+Mom Name is :Adilakshmi
+-------------------------------------------------------------------------------
+                                                                        date:31/07/2024
+non static block
+OB================
+package fushion5;
+
+public class Nonstaticmember {
+//	{
+//		System.out.println("non static member execution first.");
+//	}
+//	{
+//		System.out.println("non static member  execution is second.");
+//	}
+//
+//	{
+//		System.out.println("non static member  execution  is 3rd execution.");
+//	}
+//	Nonstaticmember()
+//	{
+OB//		System.out.println("no arg");
+//		{
+//			System.out.println("non static member execution first.");
+//		}
+//	}
+	public void input()
+	{
+		System.out.println("no arg");
+	{
+			System.out.println("non static member execution first.");
+	}
+	}
+//	int k;
+//	int l;
+//	Nonstaticmember(int k,int l)
+//	{
+//		this.k=k;
+//		this.l=l;
+//		System.out.println(k+"\n"+l);
+//		{
+//			System.out.println("argu constru");
+//		}
+//	}
+//	
+//	
+//	
+	public static void main(String[] args) {
+Nonstaticmember n=new Nonstaticmember();
+		n.input();
+	System.out.println("main method part first execution.");
+//		Nonstaticmember m=new Nonstaticmember(30,30);
+//		
+		
+	}
+
+}
+output
+-------
+no arg
+non static member execution first.
+main method part first execution.
+----------------------------------------------------------------------------------------------------
+intilizatinvariables in different places
+--------------------------------------
+package fushion5;
+
+public class InstatnceDeclaration 
+{
+	int i=100;  //declaration and intiliazation in one line.
+	int k=200;
+	public static void main(String[] args)
+	{
+		System.out.println("At the time of declaration");
+		InstatnceDeclaration  n=new InstatnceDeclaration ();
+		System.out.println(n.i+"\n"+n.k);
+		InstatnceDeclaration  n1=new InstatnceDeclaration ();
+		
+		System.out.println(n1.i+"\n"+n1.k);
+		InstatnceDeclaration  n2=new InstatnceDeclaration ();
+		System.out.println(n2.i+"\n"+n2.k);
+		System.out.println("we create multiple obj for a class will contain same value output so it is not best apporach");
+		
+		
+	}
+}
+output
+------
+At the time of declaration
+100
+200
+100
+200
+100
+200
+we create multiple obj for a class will contain same value output so it is not best apporach
+-----------------------------------------------------------------------------------------------------
+package fushion5;
+
+public class ObjRefeV {
+	int x;
+	int y;//here only declaration
+
+	public static void main(String[] args) {
+	
+		System.out.println("by using object reference");
+		ObjRefeV g=new ObjRefeV ();
+		g.x=10;
+		g.y=20;
+		System.out.println(g.x+"\n"+g.y);
+		ObjRefeV g1=new ObjRefeV ();
+		g1.x=20;
+		g1.y=10;
+		System.out.println(g1.x+"\n"+g1.y);
+		System.out.println("this approach  is not possible because length of code increaase move for betterone");
+		
+	}
+
+}
+output
+-----
+by using object reference
+10
+20
+20
+10
+this approach  is not possible because length of code increaase move for betterone
+------------------------------------------------------------------------------------------------------------
+package fushion5;
+
+public class MethodsRefAcces {
+	
+	int o;
+	int k;
+	public void method10(int o,int k) 
+	{
+	this.o=o;
+	this.k=k;
+		System.out.println(o+"\n"+k);
+	}
+	public void method()
+	{
+		int l=30;
+		int m=40;
+		System.out.println(l+"\n"+m);
+	}
+
+	public static void main(String[] args) {
+		System.out.println("all the objects will initilize with the same line");
+		MethodsRefAcces m=new MethodsRefAcces();
+		m.method();
+		MethodsRefAcces m1=new MethodsRefAcces();
+		m1.method();
+		System.out.println("all the objects will initilize with the different values");
+		MethodsRefAcces p=new MethodsRefAcces();
+		p.method10(10000, 20000);
+		MethodsRefAcces p1=new MethodsRefAcces();
+		p.method10(300000, 4000000);
+		System.out.println("initiliazation and re initilization both will done in differ place move better one is constructors");
+		
+		
+
+	}
+
+}
+output
+------
+all the objects will initilize with the same line
+30
+40
+30
+40
+all the objects will initilize with the different values
+10000
+20000
+300000
+4000000
+initiliazation and re initilization both will done in differ place move better one is constructors
+---------------------------------------------------------------------------------------------------------Constructor 
+---------
+package fushion5;
+
+public class ConstructorsInitia {
+	int l;
+	int p;
+	
+	ConstructorsInitia(int l,int p)
+	{
+//		this.p=l;
+//		this.l=l;
+	System.out.println(l+"\n"+p);
+	}
+
+	public static void main(String[] args) {
+		System.out.println("it is the best approach to initilized non static variables");
+		ConstructorsInitia  c=new ConstructorsInitia (220000,50);
+		ConstructorsInitia  c1=new ConstructorsInitia (220,500);
+		ConstructorsInitia  c2=new ConstructorsInitia (2,5);
+		System.out.println("if we want to modify non static variables go for better one that is  seters and getters");
+		
+	}
+
+}
+output
+-------
+it is the best approach to initilized non static variables
+220000
+50
+220
+500
+2
+5
+if we want to modify non static variables go for better one that is  seters and getters
+---------------------------------------------------------------------------------------------------------SettersGetters
+--------------
+package fushion5;
+
+public class SettersGettersAccess {
+	private int k;
+	private String name;
+	
+
+	public int getK() {
+		return k;
+	}
+
+
+	public void setK(int k) {
+		this.k = k;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public static void main(String[] args) {
+		System.out.println("modify non static variable  use setters");
+		SettersGettersAccess l=new SettersGettersAccess();
+		l.setK(20);
+		l.setName("Ramesh");
+//		System.out.println("if we want access the member private variable in another class Use Getters");
+		System.out.println(l.getK()+"\n"+l.getName());
+		l.setK(30);
+		l.setName("gowd");
+		System.out.println(l.getK()+"\n"+l.getName());
+		l.setK(9000);
+		l.setName("God is grade");
+		System.out.println(l.getK()+"\n"+l.getName());
+		System.out.println("if we want access the member private variable in another class Use Getters");
+		
+		
+		
+		
+
+	}
+
+}
+output
+------
+modify non static variable  use setters
+20
+Ramesh
+30
+gowd
+9000
+God is grade
+if we want access the member private variable in another class Use Getters
+------------------------------------------------------------------------------------------------------------	                                                                          date:1/08/2024
+----                                                                               --------------
+A class called Customer is given a you The task Le to find the Applicable Credit card Type and create CardType object based on the Credit Polets of a customer
+
+Define the following for the class.
+
+Attributes
+
+customertime String private creditPoints: int, private
+
+Constructor
+
+parameterizedConstructor: for both customerName  and credit points in that order.
+
+Methods
+
+Hase of the method getCreditPoints
+
+Return Type Int Modifier public
+
+Task This method must return creditPoints
+
+tlane of the method toString, Override it.
+
+Return type: String Task return only customerflame from this.
+
+Creste another class called CardType. Define the following fur the class
+
+Attributes
+
+Customer Customer, private cardType: String, private
+
+Constructor
+
+parameterized Constructar for customer and candivoe attributes in that order
+customer: Customer, private
+
+cardType: String, private
+
+Constructor:
+i
+
+parameterized Constructor: for customer and cardType attributes in that order
+
+Methods:
+
+Name of the method toString Override this.
+
+Return type: String
+
+Modifier public
+
+Task: Return the string in the following format.
+
+►The Customer Revanth' Is Eligible For 'Gold' Card.
+
+Create One more class by name CardsOnOffer and define the following for the class.
+
+Method:
+
+Name of the method getOfferedCard
+
+Return type: CardType
+
+Modifiers: public, static
+
+Arguments: Customer object
+
+Task: Create and return a CardType object after logically finding cardType from creditPoints as per the
+
+below rules.
+
+creditPoints cardType
+
+100 500 Silver
+
+501 1000 Gold
+
+1001 > Platinum
+
+< 100 EMI
+
+Code a Main class to test the working of the above.
+
+ Javacode
+---------
+package fushion5;
+public class CustomerCredit 
+{
+	private String customerName;
+	private int creditPoints;
+	
+
+public CustomerCredit(String customerName, int creditPoints) {
+		super();
+		this.customerName = customerName;
+		this.creditPoints = creditPoints;
+	}
+public int getCreditPoints()
+{
+	return creditPoints;
+}
+@Override
+public String toString() {
+	return "CustomerCredit [customerName=" + customerName + "]";
+}
+
+}
+package fushion5;
+
+public class CardType 
+{
+	 private CustomerCredit e;
+	private String cardType;
+	public CardType(CustomerCredit e, String cardType)
+	{
+		super();
+		this.e = e;
+		this.cardType = cardType;
+	}
+	@Override
+    public String toString()
+    {
+        return  e + " Is Eligible For '" + cardType;
+    }
+}
+package fushion5;
+
+public class CardsOnOffer {
+	public static CardType getOfferCard(CustomerCredit e)
+	{
+		int creditPoints=e.getCreditPoints();
+		if(creditPoints>=100 && creditPoints<=500)
+		{
+			return new CardType(e,"silver");
+		}
+		else if(creditPoints>=501 && creditPoints<=1000)
+		{
+			return new CardType(e,"Gold");
+			
+		}
+		else if( creditPoints>=1001)
+		{
+			return new CardType(e,"Platinum");
+			
+		}
+		else
+		{
+			return new CardType(e,"EMI");
+			}
+	}
+
+}
+package fushion5;
+
+public class MainCreditTest {
+
+	public static void main(String[] args) {
+		
+		
+		
+				
+	CustomerCredit c=new CustomerCredit(" Arun",800);
+System.out.println(CardsOnOffer.getOfferCard(c));
+	
+}
+}
+output
+------
+CustomerCredit [customerName= Arun] Is Eligible For 'Gold
+------------------------------------------------------------------------------------------------------------
+                                                                                             date:2/08/2024
+
+                                                                                             ------------
+
+ReturnType of classname pgm
+------------------------
+ package fushion5;
+
+import java.util.Date;
+import java.util.Scanner;
+
+public class EmployeeReturnType {
+	private String empName;
+	private int empNumber;
+	private Date empDoj;
+	public EmployeeReturnType(String empName, int empNumber, Date empDoj) {
+		super();
+		this.empName = empName;
+		this.empNumber = empNumber;
+		this.empDoj =empDoj;
+	}
+	public static EmployeeReturnType  print()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter empName");
+		String eName=sc.nextLine();
+		System.out.println("enter empNumber");
+		int num=sc.nextInt();
+//		return e;
+	
+	Date d=new Date();
+	EmployeeReturnType e=new EmployeeReturnType("Ramesh",124,d);
+	return e;
+
+	}
+	@Override
+	public String toString() {
+		return "EmployeeReturnType [empName=" + empName + ", empNumber=" + empNumber + ", empDoj=" + empDoj + "]";
+	}
+	
+}
+package fushion5;
+
+import java.util.Scanner;
+
+public class EmployeeType {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter  how many objects");
+		int num=sc.nextInt();
+		for(int i=0;i<num;i++)
+		{
+			EmployeeReturnType d=EmployeeReturnType.print();
+			System.out.println(d);
+		}
+
+	}
+
+}
+OUTPUT
+------
+enter  how many objects
+2
+enter empName
+ramesh
+enter empNumber
+123
+EmployeeReturnType [empName=Ramesh, empNumber=124, empDoj=Sat Aug 03 17:05:09 IST 2024]
+enter empName
+gowd
+enter empNumber
+456
+EmployeeReturnType [empName=Ramesh, empNumber=124, empDoj=Sat Aug 03 17:05:18 IST 2024]
+--------------------------------------------------------------------------------------------------------------                         date :5/08/2024
+
+sum of natural numbers;
+package fushion5;
+
+public class Yendi {
+
+	public static void main(String[] args) {
+		int num=10;
+		int sum=0;
+		for(int i=1;i<=10;i++)
+		{
+			if(i%3==0||i%5==0)
+			{
+				sum=sum+i;
+			}
+		}
+		System.out.println(sum);
+
+	}
+
+}
+output
+-----
+33
+sum of square of natural numbers
+-------------------
+package fushion5;
+
+public class Squares {
+
+	public static void main(String[] args) {
+		int n=10;
+		int sum=0;
+		for(int i=1;i<=10;i++)
+		{
+			sum=sum+(i*i);
+		}
+System.out.println(sum);
+	}
+
+}
+output
+----
+385
+-------------------------------------------------------------------------------------------------------
+                                                                        date :6/08/2024
+   single level inheritence
+================
+package fushion5;
+class Ola
+{
+	public void booking()
+	{
+		System.out.println("travel alone");
+	}
+}
+class OldShare extends Ola
+{
+	public void share()
+	{
+		System.out.println("travelling with stranger");
+	}
+}
+
+public class MainOla {
+
+	public static void main(String[] args) {
+		Ola o=new Ola();
+		o.booking();
+		OldShare s=new OldShare();
+		s.share();
+		s.booking();
+	}
+
+}
+output
+-----
+travel alone
+travelling with stranger
+travel alone
+------------------------------------------------------------------------------------------------
+multilevel inheritence
+-----------------------
+package fushion5;
+class Flipcart
+{
+	String productName="Iphone";
+	double productCost=70000.0;
+	public void order()
+	{
+		System.out.println("your product: "+productName+productCost+"is order successfully");
+	}
+	
+}
+class OrderStatus extends Flipcart
+{
+
+	public void ship()
+	{
+		System.out.println(productName + "is packed and shipped successfully");
+}
+}
+class ProductDelivery extends OrderStatus
+{
+	public void delivery()
+	{
+		System.out.println(productName+"is delivered successfully");
+	}
+}
+public class TestingMulti {
+
+	public static void main(String[] args) {
+		Flipcart f=new Flipcart();
+		f.order();
+		OrderStatus  o=new OrderStatus ();
+		o.ship();
+		o.order();
+		ProductDelivery p=new ProductDelivery();
+		p.delivery();
+		p.order();
+		p.ship();
+		
+		
+		
+	}
+
+}
+output
+----
+your product: Iphone70000.0is order successfully
+Iphoneis packed and shipped successfully
+your product: Iphone70000.0is order successfully
+Iphoneis delivered successfully
+your product: Iphone70000.0is order successfully
+Iphoneis packed and shipped successfully
+--------------------------------------------------------------------------------------------------------
+Heirchical inheritence
+-------------
+package fushion5;
+class Product
+{
+	String productName="Hp laptap";
+	public void product()
+	{
+		System.out.println(productName+ ":is  placed the order successfully");
+	}
+}
+class Gpay extends Product
+{
+	public void gpayPayment()
+	{
+		System.out.println("paying by gp");
+	}
+}
+class CashOndelivery extends Product
+{
+public void cashOnDelivery()
+{
+	System.out.println("paying by Cash");
+}
+}
+public class MainProduct {
+
+	public static void main(String[] args) {
+		Product p=new Product();
+		p.product();
+		Gpay g=new Gpay();
+		g.gpayPayment();
+		g.product();
+		CashOndelivery c=new CashOndelivery();
+		  c.cashOnDelivery();
+		  c.product();
+		
+
+	}
+
+}
+output
+------
+Hp laptap:is  placed the order successfully
+paying by gp
+Hp laptap:is  placed the order successfully
+paying by Cash
+Hp laptap:is  placed the order successfully
+-----------------------------------------------------------------------------------------------
+super keyword with multilevel
+-----------------------------
+package fushion5;
+class Demo1
+{
+int i=20;
+String s="java";
+
+}
+class Demo2 extends Demo1
+{
+	int i=100;
+	String s="hello";
+	public void display()
+	{
+//		System.out.println(i);
+//		System.out.println(s);
+		System.out.println(super.i);
+		System.out.println(super.s);
+	}
+}
+class Demo3 extends Demo2
+{
+	public void print()
+	{
+		System.out.println(super.i);
+		System.out.println(super.s);
+	}
+}
+public class SuperKeyword {
+
+	public static void main(String[] args) {
+		Demo2 d=new Demo2();
+		d.display();
+		Demo3 d1=new Demo3();
+		d1.print();
+
+	}
+
+}
+output
+-------
+20
+java
+100
+hello
+---------------------------------------------------------------------------------------------
+                                                          date: 7/08/2024
+Square of pgm by super keyword
+===============================
+package fushion5;
+class Ramesh
+{
+	int side;
+
+	public Ramesh(int side) {
+		super();
+		this.side = side;
+		int area=side*side;
+	System.out.println(area);
+	}
+}
+class Gowd extends Ramesh
+{
+
+	public Gowd(int side) {
+		super(side);
+
+	}
+	
+}
+public class Chaining {
+
+	public static void main(String[] args) {
+		Gowd g=new Gowd(10);	
+
+	}
+
+}
+output
+------
+100
+------------------------------------------------------------------------------------------------------
+rectangle using superkeyword
+-----------------------------
+package fushion5;
+
+public class Rectangle1{
+	int length;
+	int breadth;
+	
+
+	public Rectangle1(int length,int breadth) {
+		super();
+		this.length=length;
+		this.breadth=breadth;
+		int c=length*breadth;
+		System.out.println(c);
+	}
+}
+	class Ram extends Rectangle1
+	{
+
+		public Ram(int length, int breadth) {
+			super(length, breadth);
+			
+		}
+		
+	}
+package fushion5;
+
+public class Te {
+
+	public static void main(String[] args) {
+		Ram l=new Ram(20,30);
+		
+		
+	}
+
+}
+output
+-----
+600
+-------------------------------------------------------------------------------
+checking id  ,empname,salary equal or not in has a relation
+------------------------------------------
+package fushion5;
+
+public class Emp {
+	private int empId;
+	private String empName;
+	private double empSalary;
+	public Emp(int empId, String empName, double empSalary) {
+		super();
+		this.empId = empId;
+		this.empName = empName;
+		this.empSalary = empSalary;
+	}
+	public int getEmpId() {
+		return empId;
+	}
+	public String getEmpName() {
+		return empName;
+	}
+	public double getEmpSalary() {
+		return empSalary;
+	}
+	
+	
+}
+package fushion5;
+import java.util.Scanner;
+
+public class What {
+
+	private Emp e;
+	 public void display(Emp  e )
+ {
+		 Scanner sc=new Scanner(System.in);
+		 System.out.println("enter empId");
+		int Id=sc.nextInt();
+		System.out.println("enter empname by user");
+		String ename=sc.next();
+		System.out.println("enter empsalary by user");
+		double esalary=sc.nextDouble();
+//		if(Id==e.getEmpId()&&ename.equals(e.getEmpName())&&esalary==e.getEmpSalary())
+//		{
+//			System.out.println("matched ");
+//		}
+//		else
+//		{
+//			System.out.println("  not matched");
+//		}
+		if(Id==e.getEmpId())
+		{
+			System.out.println("matched Id "+Id);
+		}
+		else
+		{
+			System.out.println("not matched "+Id);
+		}
+		if(ename.equals(e.getEmpName()))
+		{
+			System.out.println("matched empName "+ename);
+		}
+		else
+		{
+			System.out.println("not matched empName "+ename);
+			
+		}
+		if(esalary==e.getEmpSalary())
+   {
+			System.out.println("matched empsalary "+esalary);
+	
+    }
+		else
+		{
+			System.out.println("not matched  "+esalary);
+		}
+		
+ }
+ }
+package fushion5;
+import java.util.Scanner;
+public class Elc {
+
+
+	public static void main(String[] args) {
+
+		Emp  f=new Emp (8,"ramesh",2000.00);
+		What w=new What();
+		w.display(f);
+
+	
+	}
+}
+output
+-------------
+enter empId
+8
+enter empname by user
+ramesh
+enter empsalary by user
+6969
+matched Id 8
+matched empName ramesh
+not matched  6969.0
+-----------------------------------------------------------------------
+both using has realtion composition based program      date:9/08/2024
+                                                       ----------------
+package fushion5;
+
+public class Engine {
+	private String engineName;
+	private String engineType;
+	private String enginePower;
+	public Engine(String engineName, String engineType, String enginePower) {
+		super();
+		this.engineName = engineName;
+		this.engineType = engineType;
+		this.enginePower = enginePower;
+	}
+		@Override
+	public String toString() {
+		return "Engine [engineName=" + engineName + ", engineType=" + engineType + ", enginePower=" + enginePower + "]";
+	}
+	
+	
+
+}package fushion5;
+
+public class Bike {
+	private String bikeName;
+	private String bikeColor;
+	private Engine engine;// HAS-A relation
+	
+	public Bike(String bikeName, String bikeColor) {
+		super();
+		this.bikeName = bikeName;
+		this.bikeColor = bikeColor;
+//		this.engine=engine;
+		this.engine = new Engine("GKJG","4STROKE","TORQUE");//composition
+		
+
+	}
+
+	@Override
+	public String toString() {
+		return "Bike [bikeName=" + bikeName + ", bikeColor=" + bikeColor + ", engine=" + engine + "]";
+	}
+	
+	
+
+
+	
+	
+
+}
+package fushion5;
+
+public class El {
+
+	public static void main(String[] args) {
+		Bike b=new Bike("KTM", "Black");
+		System.out.println(b);
+		
+
+	}
+
+}
+output
+=====
+Bike [bikeName=KTM, bikeColor=Black, engine=Engine [engineName=GKJG, engineType=4STROKE, enginePower=TORQUE]]
+------------------------------------------------------------------------------------------------
+                                                                                      date:12/08/2024
+methodoverloading examples with methods and constructors
+---------------------------------------------------------
+package fushion5;
+
+public class MethodOverloading 
+{
+	public void add(int x,int y)
+	{
+	System.out.println(x+y);	
+	}
+	public void add()
+	{
+		System.out.println("no arg method");
+	}
+	public int add(int l)
+	{
+		System.out.println("ARG METHOD");
+		return l;
+	}
+	public String add(String s,String s1)
+	{
+		return s+s1;
+	}
+
+	public static void main(String[] args) {
+		MethodOverloading  m=new MethodOverloading ();
+		m.add();
+		m.add(10, 20);
+		System.out.println(m.add(444));
+		System.out.println(m.add("RAMESH", "GOWD"));
+	
+
+	}
+
+}
+output
+---------
+no arg method
+30
+ARG METHOD
+444
+RAMESHGOWD
+------------------------------------------------------------------------------------------
+package fushion5;
+
+//import java.util.Scanner;
+
+public class MethodOverlading1 {
+
+	public void bookflight(long aadar, String username)
+	{
+	System.out.println("to need adar and username");
+
+	}
+	public void bookflight(double password)
+	{
+	System.out.println("userpassword need to booking");	
+	}
+
+	public static void main(String[] args) {
+		MethodOverlading1 g=new MethodOverlading1();
+		
+		g.bookflight(76251893, "ramesh");
+		g.bookflight(67.00);
+	
+	}
+
+}
+output
+------
+to need adar and username
+userpassword need to booking
+-------------------------------------------------------------------------------
+package fushion5;
+
+public class MethodConstructor {
+String s;
+int age;
+
+	public MethodConstructor(String s, int age) {
+	super();
+	this.s = s;
+	this.age = age;
+}
+	
+	public MethodConstructor() {
+		super();
+		System.out.println("no argment constructor");
+	}
+	
+
+	public MethodConstructor(int s,String s2) {
+		System.out.println("argment constructor");
+		System.out.println(s+"\n"+s2);
+	
+	}
+	
+
+	@Override
+	public String toString() {
+		return "MethodConstructor [s=" + s + ", age=" + age + "]";
+	}
+	public static void main(String[] args) {
+		MethodConstructor l=new MethodConstructor("Ramesh",24);
+		System.out.println(l);
+		MethodConstructor l1=new MethodConstructor();
+		MethodConstructor l2=new MethodConstructor(24,"ramesh");
+
+	}
+
+}
+output
+------
+MethodConstructor [s=Ramesh, age=24]
+no argment constructor
+argment constructor
+24
+ramesh
+-----------------------------------------------------------------------------------------
+package fushion5;
+
+public class ConMethod {
+	String CompanyName;
+	
+	
+
+	public ConMethod(String companyName) {
+		super();
+		CompanyName = companyName;
+		System.out.println(companyName);
+	}
+
+
+	public ConMethod(String s,int Age,float f,double l) {
+		System.out.println("argment");
+		System.out.println(s+"\n"+Age+"\n"+f+"\n"+l);
+	}
+	
+
+
+	public ConMethod() {
+		System.out.println("no arg");
+	
+	}
+
+
+
+
+	public static void main(String[] args) {
+		ConMethod c=new ConMethod("fushion5");
+		ConMethod c1=new ConMethod();
+		ConMethod c2=new ConMethod("bheem",24,24.0f,50.00);
+		
+
+	}
+
+}
+output
+------
+fushion5
+no arg
+argment
+bheem
+24
+24.0
+50.0
+---------------------------------------------------------------------------------------------------
+celsius to farenheit/fareneinheit to celcius
+-------------------------------------------
+package fushion5;
+
+public class Celsius {
+	public double celsius(double f)
+	{
+		double c=(f-32)*5/9;
+		return c;
+		
+	}
+	public int farenheit(int c)
+	
+	{
+		int f=(c*9/5)+32;
+		return f;
+		
+	}
+
+	public static void main(String[] args) {
+
+		Celsius d=new Celsius();
+		System.out.println(d.celsius(40 ));
+		System.out.println(d.farenheit(10));
+	}
+
+}
+output
+------
+4.444444444444445 celcius value
+50 fareneheit
+------------------------------------------------------------------------------------------------------
+                                                date:13/08/2024
+heterogenous program by using Var-args
+--------------------------------------
+package fushion5;
+
+public class Wav {
+	public void method(Object... k)
+	{
+	
+	for(Object p:k)
+	{
+		System.out.println(p);
+	}
+	}
+	public static void main(String args[])
+	{
+		Wav v=new Wav();
+		v.method(0,"ram",80.00,'A',true);
+		
+	}
+	}
+	
+
+output
+--------
+0
+ram
+80.0
+A
+true
+--------------------------------------------------------------------------------------------------------
+package fushion5;
+
+public class WAV2 {
+	public void method()          //widining
+	{
+		System.out.println("this is widining");
+		byte b=20;
+		int c=b;
+		System.out.println(c);
+		int d=50;
+		double e=d;
+		System.out.println(d);
+
+	}
+	public void method(int s,String s1)
+	{
+		System.out.println("method overloading concepts:" +   s  + "" + s1);
+	}
+	public void method(Integer i)
+	{
+		System.out.println("AutoBoxing is :"+i);
+	}
+	public int method(int x, int y)
+	{ 
+		System.out.println("having return type and that values:"+x+""+y);
+	return x%y;
+	}
+	public void method(int...n)
+	{
+		for(int x:n)
+		{
+			System.out.println("arg is executed:"+x);
+		}
+	}
+	
+	
+
+	public static void main(String[] args) {
+		WAV2 v=new WAV2();
+		v.method();                //widening
+		v.method(45, "Ramesh");   //method overloading
+		v.method(40);             //autoBoxing
+		v.method(2, 1);           //modular division
+		v.method(10);          //var- args
+	}
+
+}
+output
+------
+this is widining
+20
+50
+method overloading concepts:45Ramesh
+AutoBoxing is :40
+having return type and that values:21
+AutoBoxing is :10
+---------------------------------------------------------------------------------------------------------------                                                                     date:20/08/2024
+                                                                        ---------
+examples of method overridng
+------------------------------
+package fushion5;
+class FourWheelarVehicle
+{
+	String fourwheelarVehicleName="KIA";
+	public void drive()
+	{
+		System.out.println("FourWheelarVehicle on drive mode :"+fourwheelarVehicleName);
+	}
+}
+class TwoWheelar extends FourWheelarVehicle
+{
+	
+	String twowheelarVehicleName="Bullet";
+	@Override
+	public void drive()
+	{
+		System.out.println("TwoWheelar on Drive mode :"+twowheelarVehicleName);
+	}
+}
+
+public class MethodOverriding {
+	
+public static void main(String[] args) {
+	TwoWheelar t=new TwoWheelar();
+	t.drive();
+	FourWheelarVehicle f=new FourWheelarVehicle();
+	f.drive();
+	
+	
+}
+}
+output
+-------
+TwoWheelar on Drive mode :Bullet
+FourWheelarVehicle on drive mode :KIA
+-------------------------------------------------------------------------------------
+upcasting and downcasting pmb
+------------------------
+package fushion5;
+class Fruit
+{
+	public void taste()
+	{
+
+		System.out.println("fruit is taste");
+	}
+}
+class WaterMelon extends Fruit
+{
+	public void taste()
+	{
+		System.out.println("WaterMelon is taste and watery");
+	} 
+}
+class Mango extends Fruit
+{ 
+	public void taste()
+	{
+		System.out.println("Mango is sweet and sour");
+	}
+
+}
+public class TestFruit {
+	public static void main(String[] args) {
+		
+		Fruit f=new WaterMelon(); 
+		f.taste();
+		Fruit g=new Mango();      //upcasting
+		g.taste();   
+		Fruit l=new Fruit();
+		Mango p= new Mango();  
+		
+	Mango m=(Mango)g;
+	m.taste();	
+	 WaterMelon w= (WaterMelon)f;  //downcasting
+	 w.taste();
+	}
+}
+output
+-------
+WaterMelon is taste and watery
+Mango is sweet and sour
+Mango is sweet and sour
+WaterMelon is taste and watery
+----------------------------------------------------------------------------------------------------------- 
+                                                                          date:21/08/2024
+                                                                         -------------------
+increaing accesspecifier in overriding concepts
+--------------------------------------- =====
+package fushion5;
+class M1
+{
+	//public mention also not pbm here
+  void m1()
+ {
+	 System.out.println("m1 is non arment and super class method with default accessspecifier");
+ }
+ 
+}
+class N extends M1
+{
+	@Override
+    public void m1()
+	{
+    	System.out.println("increasee the accesspecifier of subclass");
+		System.out.println("m1 is non arg method of sub and with public accessspecifier");
+	}
+}
+public class AccessModifier {
+public static void main(String[] args) {
+	
+	N ref1=new N();
+	ref1.m1();
+	
+	M1 ref=new M1();
+	ref.m1();
+}
+
+}
+output
+-------
+increasee the accesspecifier of subclass
+m1 is non arg method of sub and with public accessspecifier
+m1 is non arment and super class method with default accessspecifier
+------------------------------------------------------------------------------------------------------------
+package fushion5;
+class F
+{
+	void m2()
+	{
+		System.out.println("no arg  default access specifierof sup class");
+	}
+}
+class G extends F
+{
+	//default, protected,public
+	@Override
+	 protected void m2()
+	{
+		System.out.println("no arg  protected access specifier  of sub class");
+	}
+}
+
+public class Default {
+
+	public static void main(String[] args) {
+		G ref2=new G();
+		ref2.m2();
+		F ref3=new F();
+		ref3.m2();
+
+	}
+
+}
+output
+------
+no arg  protected access specifier  of sub class
+no arg  default access specifierof sup class
+------------------------------------------------------------------------------------------------
+      protected behaviour
+---------------
+package fushion5;
+class Ram1
+{
+	protected void m1()
+	{
+		System.out.println("protected accespecifier of parent class");
+	}
+}
+class Gowd1 extends Ram1
+{
+	      //protected also taken executed.
+	@Override       
+	public void m1()              
+	{
+		System.out.println("public accespecifier of sub class");
+	}
+	
+}
+public class Protected {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Gowd1 g=new Gowd1();
+g.m1();
+Ram1 r=new Ram1();
+r.m1();
+	}
+
+}
+output
+------
+public accespecifier of sub class
+protected accespecifier of parent class
+------------------------------------------------------------------------------------------------
+Method hidding
+--------------
+package fushion5;
+
+class Ramesh10
+{
+	public static void print()
+	{
+		System.out.println("parent class of method");
+	}
+}
+class Gowd10 extends Ramesh10
+{
+public  static void print()      //method hidding
+	{
+		System.out.println("child class of method");
+	}
+}
+
+public class MethodHidding {
+
+	public static void main(String[] args) {
+		Ramesh10 r2=new Gowd10();
+	r2.print();
+	}
+
+}
+output
+------
+parent class of method
+---------------------------------------------------------------------------------------------
+co-varient concepts uses:we can change return types of methodsignature also methodoverriding possible..
+ex:
+package fushion5;
+class Parent
+{
+	String parentName="Nagappa";
+	int parentAge =55;
+	public void display()
+	{
+		System.out.println("parent name:"+parentName);
+		System.out.println("parent age :"+parentAge); 
+	}
+}
+class Child extends Parent
+{
+	String childName="Ramesh";
+	int childAge=24;
+	@Override
+	public void display()
+	{
+		System.out.println("Childname:"+childName);
+		System.out.println("Childage :"+childAge); 
+	}
+}
+class Super
+{
+	public Parent print()
+	{
+		Parent k=new Parent();
+		k.display();
+		return k;
+	}
+}
+class Sub extends Super
+{
+	@Override
+	public Child print()
+	{ 
+		Child p=new Child();
+    p.display();
+		return p;
+	}
+}
+
+public class CoVarient {
+
+	public static void main(String[] args) {
+	
+		Sub s=new Sub();
+		s.print();
+		Super s1=new Super();
+		s1.print();
+		
+	}          
+
+}
+output
+-----
+Childname:Ramesh
+Childage :24
+parent name:Nagappa
+parent age :55
+------------------------------------------------------------------------------------------------
+                                                                      date:22/08/2024
+                                                                     ----------------
+final is a keyword 3ways to aware the this keyword
+class name as Final
+package fushion5;
+class Final
+{
+	 void m1()
+	{
+		System.out.println("class is final of super");
+	}
+}
+class Final1 extends Final
+{
+	void m1()
+	{		
+		System.out.println("subclass");
+	}
+	}
+
+public class FinalClass {
+
+	public static void main(String[] args) {
+		Final f=new Final();
+		f.m1();
+		Finall f1=new Finall(); ///final class is not inherited
+		f.m1();
+
+	}
+
+}
+output
+note:final class is not inherited so
+
+======error
+---------------------------------------------------------------------------------
+final is a keyword 3ways to aware the this keyword
+method name as final
+
+package fushion5;
+class Ram20
+{
+	final void m2()
+	{
+		System.out.println("super class of final");
+	}
+}
+class Gowd20 extends Ram20
+{
+	final void m2() //cannot override the final method from Ram20
+	{
+		System.out.println("sub class of final");
+	}
+}
+
+public class FinalMethod {
+
+	public static void main(String[] args) {
+		Ram20 f=new Ram20();
+		f.m2();
+		Gowd20 g=new Gowd20();
+		g.m2();
+
+	}
+
+}
+output
+--------
+super class of final
+Note:final method can't overriden
+so but runtime error
+-----------------------------------------------------------------------------------------------
+package fushion5;
+class Variable
+{
+	  int i=20;
+	public void m3()
+	{
+		i=25;
+		System.out.println("i value"+i);
+	}
+}
+class Variable1 extends Variable
+{
+	 final int j=30;
+	public void m3()
+	{
+		j=35;             //note if final is declared as variable can't re-initilization
+		System.out.println("j value"+j);
+	}
+}
+
+public class FinalVariable {
+
+	public static void main(String[] args) {
+		Variable v=new Variable();
+		v.m3();
+		Variable1 v1=new Variable1();
+		v1.m3();
+
+	}
+
+}
+output;
+======
+i value 25
+Note:note if final is declared as variable can't re-initilization
+so runtime error occur
+----------------------------------------------------------------------------------------
+co-varient by object class
+package fushion5;
+class Object
+{
+	
+		String cmpName="Fusion5";
+		public void display1()
+		{
+			System.out.println("company name:"+cmpName);
+			
+		}
+	}
+class Super1 extends Object
+{
+	String cmpLocation="gachhibouli";
+	public void display1()
+	{
+		System.out.println("cmpLocation:"+cmpLocation);
+		
+	}
+}
+class Child1 extends Object
+{
+	int esTblishedYear=2019;
+	public void display1()
+	{
+		System.out.println("companyEstablished year"+esTblishedYear);
+		
+	}
+	
+}
+class Object2
+{
+	public Object display1()
+	{
+		 Object o=new  Object();
+		 o.display1();
+		 return o;
+	}
+}
+class Super2
+{
+	public Super1 display1()
+	{
+		 Super1 p=new  Super1();
+		 p.display1();
+		 return p;
+	}
+	
+}
+class Child2
+{
+	public Child1 display1()
+	{
+		 Child1 q=new  Child1();
+		 q.display1();
+		 return q;
+	}
+	
+}
+public class Objectest {
+
+	public static void main(String[] args) {
+		Object2 l=new Object2();
+		l.display1();
+		Super2 s=new Super2();
+		s.display1();
+		Child2 c=new Child2();
+		c.display1();
+
+	}
+
+}
+output---
+company name:Fusion5
+cmpLocation:gachhibouli
+companyEstablished year2019
+---------------------------------------------------------------------------------------------------------
+                                                                                               date:26/08/2024
+---------------
+rectangle,circle ,square area by using abstract class and abstarct method
+-------------------
+package fushion5;
+import java.util.Scanner;
+abstract class Rectangle10
+{
+	abstract void areaRectangle(int length,int breadth);
+}
+class Rectangle15 extends Rectangle10
+{
+	@Override
+	void areaRectangle(int length, int breadth) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Using Abstractclass and abstract method");
+		System.out.println("enter length");
+		int length1 =sc.nextInt();
+		System.out.println(" enter breadth");
+		int breadth1=sc.nextInt();
+	int area=length1*breadth1;
+	System.out.println("area of rectangle is:"+area);
+		
+	}
+}
+public class TestRe {
+
+	public static void main(String[] args) {
+		Rectangle10 r=new Rectangle15();
+		r.areaRectangle(0, 0);
+		 Square1 s=new Square10();
+		 s.areaSquare(0);
+		 CircleArea  c=new CircleArea1();
+		 c.areaofCircle(0);
+	}
+
+}
+output
+------
+Using Abstractclass and abstract method
+enter length
+3
+ enter breadth
+3
+area of rectangle is:9
+Using Abstractclass and abstract method
+enter side
+4
+area of square is : 16
+enter radius
+3
+area of circle is: 28.26
+-----------------------------------------------------------------------------------------
+package fushion5;
+import java.util.Scanner;
+public abstract class Square1 {
+	abstract void areaSquare(int side);
+}
+class Square10 extends Square1{
+
+	@Override
+	void areaSquare(int side) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Using Abstractclass and abstract method");
+		System.out.println("enter side");
+		int side1=sc.nextInt();
+		int area=side1*side1;
+		System.out.println("area of square is : " +area);	
+	}	
+		
+	}
+
+---------------------------------------------------------------------------------------------------
+package fushion5;
+import java.util.Scanner;
+public abstract class CircleArea 
+{
+abstract void areaofCircle(int radius);
+}
+class CircleArea1 extends CircleArea
+{
+
+	@Override
+	void areaofCircle(int radius) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter radius");
+	int radius1=sc.nextInt();
+	float pi=(float) 3.14;
+	float area=(float) (pi*radius1*radius1);
+	System.out.println("area of circle is: "+area);
+		
+	}
+	
+}
+-------------------------------------------------------------------------------------------------------------                                    date:29/08/2024
+ functional interface
+------------------------
+package fushion5;
+@FunctionalInterface
+public interface FunctionalName {
+	void wish();
+
+}
+
+package fushion5;
+
+public class TestFunctionalInterface {
+
+	public static void main(String[] args) {
+		FunctionalName f=()->System.out.println("this is functional interface");
+		f.wish();
+	}
+
+}
+output
+--------
+this is functional interface
+mainadavntage:imporove the performance and les code complaxibility
+------------------------------------------------------------------------------------------------
+Ananomous function
+------------------------------
+package fushion5;
+public interface Lam 
+{
+	void display();
+}
+class Yash implements Lam
+{
+
+	@Override
+	public void display() {
+		System.out.println("bye");	
+	}
+}
+package fushion5;
+
+public class Test2000 {
+
+	public static void main(String[] args) {
+		Lam y=new Yash();
+		y.display();
+		Lam l=new Lam()
+		{
+	public void display()
+	{
+	System.out.println("Hiii");
+	}
+		};
+		l.display();
+}
+
+	}
+
+
+output
+---------
+bye
+Hiii
+------------------------------------------------------------
+LamdaExpression by using 2 varible sum
+--------------------------------------
+package fushion5;
+
+public interface LamdaExpression {
+	void sum(int x,int y);
+
+}
+class TTTT
+{
+	public static void main(String[] args)
+	{
+		LamdaExpression l=(x,y)->System.out.println("sum is:"+(x+y));
+		l.sum(4, 8);
+	}
+}
+package fushion5;
+
+public class TestLamda {
+	public static void main(String[] args) {
+				LamdaExpression l=(x,y)->System.out.println("sum is:"+(x*y));
+				l.sum(4, 8);
+			}
+		
+	}
+
+
+output
+-------
+sum is:32
+-----------------------------------------------------------------------------------
+functional interface with addition 2 numbers
+-----------------------------------
+package fushion5;
+@FunctionalInterface
+public interface ReturnSumfunctionalInterface {
+int calculateSum(int x,int y);
+	
+}
+package fushion5;
+
+public class TestRefu
+{
+	public static void main(String[] args)
+	{
+		ReturnSumfunctionalInterface r=(x,y)->
+		{
+//			x+y;
+			return x+y;
+		};
+		int k=r.calculateSum(2,4);
+		System.out.println(k);
+	}
+}
+
+output
+----
+6
+-----------------------------------------------------------------------------------
+                             date:2/09/2024
+                              --------------
+predicate,supplier,function,consumer interface inbulid methods by using functional interface
+
+with class of supplier<T>
+package fushion5;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
+
+public class StudentFunctional_ {
+	String sName;
+	int sAge;
+	public StudentFunctional_(String sName, int sAge) {
+		super();
+		this.sName = sName;
+		this.sAge = sAge;
+		// TODO Auto-generated constructor stub
+	}
+	public void display()
+	{
+		System.out.println("omm Suplier functional interface with custom class");
+	}
+
+	@Override
+	public String toString() {
+		return "StudentFunctional_ [sName=" + sName + ", sAge=" + sAge + "]";
+	}
+}
+package fushion5;
+
+import java.util.function.Supplier;
+
+public class MainSupplier {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Supplier<StudentFunctional_>s=()->new StudentFunctional_("RAMESH", 24);
+		
+	StudentFunctional_ e=s.get();
+	
+		System.out.println(e);
+		e.display();
+
+				
+
+	}
+
+}
+output
+-----
+StudentFunctional_ [sName=RAMESH, sAge=24]
+omm Suplier functional interface with custom class
+-----------------------------------------------------------------------------------------------------
+predicate with nterface inbuilt
+package fushion5;
+
+import java.util.function.Predicate;
+
+public class PredicateFunctionalInterface {
+	public static void main(String[] args) 
+	{
+		
+	Predicate <Integer> p=n->n%2==0;
+	System.out.println("inbuild interface type ");
+			System.out.println(p.test(7));	
+
+	}
+
+}
+output
+-------
+inbuild interface type 
+false
+-------------------------------------------------------------------------------------------------------	
+Consumer inbuildclass
+package fushion5;
+
+import java.util.function.Consumer;
+
+public class ConsumerType{
+
+	public static void main(String[] args){
+		
+		Consumer<Integer>l=k->System.out.println(k);
+		l.accept(5);
+		Consumer<Character>k=o->System.out.println(o);
+		k.accept('k');
+		Consumer<Float>m=p->System.out.println(p);
+		m.accept((float) 8.0);
+		Consumer<Double>n=t->System.out.println(t);
+		n.accept(38.00);
+		Consumer<Long>g=q->System.out.println(q);
+		g.accept((long) 245);
+
+	}
+
+}
+output
+------
+5
+k
+8.0
+38.0
+245
+---------------------------------------------------------------------------------------------------------
+package fushion5;
+import java.util.function.Function;
+public class Maaa
+{
+	public static void main(String[] args) {
+	Function<Integer, Integer> l=x->x*x;
+			{
+			System.out.println(l.apply(5));
+			
+			}
+	
+	
+	
+	
+		
+		
+	}
+}
+output
+-----
+25
+------------------------------------------------------------------------------------------------------------
+ date :18/09/2024
+wedness day
+string reverse without using any inbuilt methods
+package RevString;
+public class RevString {
+	
+	public static void main(String[] args) {
+		String r="RAMESH";
+		String rev="";
+		for(int i=r.length()-1;i>=0;i--)
+		{
+		rev=rev+r.charAt(i);	
+		}
+		System.out.println("without using inbuilt methods a reverse  string");
+		System.out.println(rev);
+		
+	}
+
+}
+output
+=======
+without using inbuilt methods a reverse  string
+HSEMAR
+-------------------------------------------------------------------------------------------------
+duplcates removed from the given string
+-----------------------------------------
+package RevString;
+public class DuplicateRemove{
+	public static void main(String[] args)
+	{
+		String r="EDIGA RAMESH";
+		char[] ch= 
+	for(int i=0;i<r.length();i++)
+		{
+			for(int j=i+1;j<r.length();j++)
+		{
+				if(ch[i]==ch[j])
+				{
+				
+					System.out.print(ch[i]);
+//					break;
+			
+				}
+		}
+		}
+	}
+}
+ output
+======
+EA
+-----------------------------------------------------------------------------------------------------------duplicates count of string program
+-------------------------------------
+package RevString;
+public class DuplicateRemove
+{
+public static void main(String[] args)
+	{
+		String r="EDIGA RAMESH";
+		char[] ch=r.toCharArray();
+		int count=0;
+	for(int i=0;i<r.length();i++)
+		{
+			for(int j=i+1;j<r.length();j++)
+		        {
+				  if(ch[i]==ch[j])
+				  {
+				 count++;
+				 System.out.println( "duplicates character : " + ch[i]);
+				  }
+				}
+		}
+	System.out.println("duplicates characters count :" + count);
+	}
+}
+ output
+--------
+duplicates character : E
+duplicates character : A
+duplicates characters count :2
+--------------------------------------------------------------------------------------------------------
+String soerting program
+-----------------------package RevString;
+
+import java.util.Arrays;
+
+public class SortString {
+	public static void main(String[] args) {
+		String s="Ramesh";
+		char[] ch=s.toCharArray(); 
+		
+		Arrays.sort(ch);
+		String s1=new String(ch);
+		System.out.println(" sorted String is: "+ s1);
+		
+		
+	
+	
+	}
+
+}
+output
+-------
+ sorted String is: Raehms
+------------------------------------------------------------------------------------------------------
+string palindrome
+-----------------
+package RevString;
+public class RevString {
+	
+	public static void main(String[] args) {
+		
+		String s="dade";
+		
+		boolean b=true;
+		
+		for(int i=0;i<s.length();i++)
+		{
+			if(s.charAt(i)!=s.charAt(s.length()-i-1))
+			{
+				b=false;  
+				break;
+			}
+		}
+		if(b)
+		{
+		 System.out.println("palindrome :"+s);	
+		}
+		else
+			System.out.println("Not a palindrome:"+s);
+		
+	}
+}
+output
+------
+Not a palindrome:dade
+------------------------------------------------------------------------------------------------------------String palindrome or not program another way
+------------------------------------------
+package com.ram.test;
+
+public class Rameshgowd {
+
+	public static void main(String[] args) {
+		String s="mam";
+		String l="";
+		for(int k=s.length()-1;k>=0;k--)
+		{
+			l=l+s.charAt(k);
+		}
+		if(s.equals(l))
+		{
+			System.out.println("palindrome  " + l);
+		}
+		else
+		{
+			System.out.println("not palindrome " +  l);
+		}
+
+	}
+
+}
+output
+--------
+palindrome : mam
+----------------------------------------------------------------------------------------------------------
+ date:26/09/2024
+thursday
+multiple try and catch blocks
+---------------------------
+package Multiplecatch;
+
+public class NestedTry{
+
+	public static void main(String[] args) {
+		try {
+			int a=10;
+			int b=0;
+			int c=a/b;
+			      System.out.println(c);
+			      
+			     try {
+				 String s=null;
+				 System.out.println(s.length());
+				 
+				 try {
+					 String s1="java";
+					 System.out.println(Integer.parseInt(s1));
+					 }
+				 catch (ArrayStoreException e2) {
+					 System.out.println("handled"+e2);
+				    }
+				   }
+		         catch (NullPointerException e) 
+			     {
+			     System.out.println("handled"+e);
+           		 }
+		         }
+		 catch (Exception e1) 
+	     {
+		 System.out.println("handled"+e1);
+	     }
+		
+	}
+}
+
+output
+------
+
+handledjava.lang.ArithmeticException: / by zero
+not error this part
+-----------------------------------------------------------------------------------------------------------
+single try and multple catch blocks
+-------------------------------------
+package Multiplecatch;
+
+public class MultipleCatchOnetryblock {
+
+	public static void main(String[] args) {
+		
+		try 
+		{
+		int a=10;
+		int b=0;
+		int c=a/b;
+		  System.out.println(c);    
+		}catch (ArithmeticException e) {
+			try
+			{
+				String s="ramesh";
+				System.out.println(s.length());
+			}catch (Exception e1)
+			{
+				try {
+					
+				}catch (Exception e2) {
+					System.out.println(e2);
+				}
+			}
+		}
+
+	}
+
+}
+output;
+=====
+6
+---------------------------------------------------------------------------------------------------
+incase method return types also what should return where should return is that try and catch block 2 side we have return statements
+package Multiplecatch;
+
+public class Method {
+	
+	public  static String print()
+	{
+		try
+		{
+			int a=10;
+			int b=0;
+			int c=a/b;
+			  System.out.println(c); 
+			  return "ram";
+		}catch (Exception e) {
+			System.out.println("handled"+e);
+			return "ram";
+		}
+	}
+	
+
+}
+package Multiplecatch;
+public class InsideTryBlockandCatchblockUsingMethod
+{
+public static void main(String[] args) 
+{
+Method.print();
+}
+}
+output
+-----
+handledjava.lang.ArithmeticException: / by zero
+-------------------------------------------------------------------------------------------------------
+autoclosable and closable interface using try wuth resource
+-------------------------------------------------------- 
+
+
+create custom exception by using uncheccked exception
+pgm;
+----------------------------------------------
+
+date 30/09/2024
+
+package com.ramesh.test;
+
+import java.util.Scanner;
+
+class AgeInvalidException extends Exception
+{
+	public AgeInvalidException()
+	{
+		
+	}
+	
+	public AgeInvalidException(String msg)
+	{
+		super(msg);
+	}
+}
+public class Testing {
+
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a age:");
+		int age=sc.nextInt();
+		
+		try
+		{
+			if(age>18)
+			{
+				System.out.println("U are eligible for vote:");
+			}
+			else
+				throw new AgeInvalidException("U are not eligible for vote");
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}
+output
+-------
+Enter a age:
+50
+U are eligible for vote:
+---------------------------------------------------------------------------------------------
+
+customerprogram
+-------------
+package com.ramesh.test;
+public class Customer {
+	int id;
+	String name;
+	double sal;
+	
+	public Customer(int id, double sal , String name) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.sal = sal;
+	}
+
+	@Override
+	public String toString() {
+		return"Customer Name is "+name+", id is "+id+", Salary is "+sal;
+	}
+}
+package com.ramesh.test;
+
+import java.util.Scanner;
+
+public class CustomerTest {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter how many object want to be created");
+		int o=sc.nextInt();
+		
+		Object [] obj=new Object[o];
+		for(int i=0;i<o;i++) {
+			System.out.println("Enter ID , Salary , Name");
+			int id=sc.nextInt();
+			double sal=sc.nextDouble();
+			String name=sc.nextLine();
+			name=sc.nextLine();
+			obj[i]=new Customer(id,sal,name);
+		}
+		for(int i=0;i<o;i++) {
+			
+		}
+		for(Object obje:obj) {
+			System.out.println(obje);
+		}
+	}
+}
+output
+-------
+Enter how many object want to be created
+3
+Enter ID , Salary , Name
+23
+3444
+ram
+Enter ID , Salary , Name
+24
+4666
+nithin
+Enter ID , Salary , Name
+34
+6668
+pavan
+Customer Name is ram, id is 23, Salary is 3444.0
+Customer Name is nithin, id is 24, Salary is 4666.0
+Customer Name is pavan, id is 34, Salary is 6668.0
+--------------------------------------------------------------------------------------------------------------------
+create  a user defined exception by using unchecked exception
+
+package com.ramesh;
+
+import java.util.Scanner;
+
+class exp extends RuntimeException{
+	public exp() {
+		
+	}
+	@Override
+	public String toString() {
+		return "invalide mobile number";
+	}
+	
+}
+public class UncheckedException {
+
+	public static void main(String[] args) throws exp {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enthe the mobile number:");
+		int n = sc.nextInt();
+		int count = 0;
+		for(int i=n;n>0;n=n/10) {
+			count++;
+		}
+		if(count == 10) {
+			System.out.println("valid mobile number");
+		}else {
+			throw new exp();
+		}
+	}
+}
+
+output
+========
+Enthe the mobile number:
+1234567891
+valid mobile number
+--------------------------------------------------------------------------------------------------------------    date:1/10/2024
+second largest number an array
+package com.ramesh;
+
+public class Secondl {
+	public static void main(String[] args) {
+		int a[]= {2,3,68,89};
+		int temp=0;
+		
+		for(int i=0;i<a.length;i++)
+		{
+			for(int j=i+1;j<a.length;j++)
+			{
+				
+				temp=a[i];
+					a[i]=a[j];
+					a[j]=temp;
+				
+				 
+			}
+			
+		}
+		System.out.println(a[1]);
+		
+		
+		
+	}
+
+}
+output
+=======
+68
+===================================================================================
+
+date :3/10/24
+multiple arrays
+Monday
+multimentional array
+----------------------
+package closable;
+import java.util.Scanner;
+public class TwodimensionalArray {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter row");
+		int row=sc.nextInt();
+		System.out.println("enter col");
+		int col=sc.nextInt();
+		int save[][]=new int[row][col];
+		System.out.println("inserting values");
+		for(int i=0;i<row;i++)
+		{
+			for(int j=0;j<col;j++)
+			{
+				 save[i][j]=sc.nextInt();
+			}
+		}
+		System.out.println("reading the values");
+		
+		for(int i=0;i<row;i++)
+		{
+			for(int j=0;j<col;j++)
+			{
+				System.out.print("  " + save[i][j]);
+			} 
+			System.out.println();
+		}
+	}
+
+}
+output
+-------
+enter row
+3
+enter col
+3
+inserting values
+4
+5
+6
+7
+8
+9
+10
+3
+5
+reading the values
+  4  5  6
+  7  8  9
+  10  3  5
+-------------------------------------------------------------------------------------------------
+8/10/2024
+binary number or not checking
+package closable;
+
+import java.util.Scanner;
+
+public class BinaryNumber1 {
+	public  static boolean CheckBinary(int n)
+	{
+		if(n<0)
+		{
+			return false;
+		}
+		
+		while(n!=0)
+		{
+			if(n%10!=0 && n%10!=1)
+			{  
+				return false;
+			}
+			n=n/10;
+		}
+		return true;
+	}
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number");
+		int n=sc.nextInt();
+		if(CheckBinary(n))
+		{
+			System.out.println("It is a Binary Number");
+		}
+		else
+		{
+			System.out.println("It is not aBinary Number");
+		}
+	}
+	}
+
+output
+------
+enter a number
+10010
+It is a Binary Number
+---------------------------------------------------------------------------------------
+date :15/10/2024
+tuesday
+highest and largest  value in an array in single pgm
+package closable;
+
+public class HighestLowest {
+	    public static void main(String[] args) {
+	        int[] array = {3, 1, 4, 1, 5, 9, 2, 6, 5};
+
+	        int highest = array[0];
+	        int lowest = array[0];
+
+	        for (int i = 1; i < array.length; i++) 
+	        {
+	            if (array[i] > highest)
+	            {
+	                highest = array[i];
+	            }
+	            if (array[i] < lowest) {
+	                lowest = array[i];
+	            }
+	        }
+
+	        System.out.println("Highest: " + highest);
+	        System.out.println("Lowest: " + lowest);
+	    }
+	}
+
+output
+=======
+Highest: 9
+Lowest: 1
+-----------------------------------------------------------------------------------------------------
+date :15/10/2024
+clockwise matrix in an array
+package closable;
+
+import java.util.Scanner;
+
+public class ClockMatrix {
+
+		public static void main(String[] args) 
+		{
+			Scanner sc=new Scanner(System.in);
+			System.out.println("enter a row");
+			int m=sc.nextInt();
+			System.out.println("enter a column");
+			int n=sc.nextInt();
+			
+			int A[][]=new int[m][n];
+			int B[][]=new int[m][n];
+			
+			System.out.println("The given Matrix is:");
+			for(int i=0;i<n;i++)
+			{
+				for(int j=0;j<n;j++)
+				{
+				A[i][j]=sc.nextInt();
+				}
+			}
+			for(int i=0;i<n;i++)
+			{
+				for(int j=0;j<n;j++)
+				{
+				System.out.print(A[i][j]  + " ");
+				}System.out.println();
+				
+			}
+			System.out.println(" ");
+			for(int i=0;i<n;i++)
+			{
+				for(int j=0;j<n;j++)
+				{
+					B[i][j]=A[j][i];
+				}
+			}
+			for(int i=0;i<n;i++)
+			{
+				for(int j=n-1;j>=0;j--)
+				{
+					System.out.print(B[i][j]+" ");
+				}System.out.println();
+			}
+			
+			
+		}
+	}
+
+	output
+----------------
+enter a row
+3
+enter a column
+3
+The given Matrix is:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+1 2 3 
+4 5 6 
+7 8 9 
+ 
+7 4 1 
+8 5 2 
+9 6 3 
+----------------------------------------------------------------------------------------------------------
+date:  15/10/2024
+AuntyClockWise direcction of an array
+--------------------------------------------
+
+
+
+
+
+
+ package closable;
+
+import java.util.Scanner;
+
+public class AuntClockMatrix 
+{
+	
+	 public static void main(String[] args) 
+	  {
+	   Scanner sc=new Scanner(System.in);
+	   System.out.println("enter a row");
+	  int m=sc.nextInt(); 
+	  System.out.println("enter a column");
+	  int n=sc.nextInt();
+	  
+	 int A[][]=new int[m][n]; 
+	 int B[][]=new int[m][n];
+	  
+	  System.out.println("The given Matrix is:"); 
+	  for(int i=0;i<n;i++) 
+	  { 
+	  for(int j=0;j<n;j++) 
+	  {
+	   A[i][j]=sc.nextInt(); 
+	   } 
+	   }
+	    for(int i=0;i<n;i++) 
+	    { 
+	    	for(int j=0;j<n;j++) 
+	    	{ 
+	    		System.out.print(A[i][j]+" "); 
+	  }
+	  System.out.println();
+	   }
+	  for(int i=0;i<n;i++) 
+	  {
+	   for(int j=0;j<n;j++)
+	    {
+	     B[i][j]=A[j][i]; 
+	     }
+	     
+	     } 
+	    System.out.println(" ");
+	    
+	  for(int i=n-1;i>=0;i--) 
+	 { 
+	  for(int j=0;j<n;j++) 
+	  {
+	   System.out.print(B[i][j]+" ");
+	  }
+	  
+	  System.out.println(); 
+	  }
+	  }
+}
+	  
+OUTPUT
+-------
+enter a row
+3
+enter a column
+3
+The given Matrix is:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+1 2 3 
+4 5 6 
+7 8 9 
+ 
+3 6 9 
+2 5 8 
+1 4 7 
+--------------------------------------------------------------------------------------
+date:16/10/2024
+using sleep method multithreading
+-----------------------------------
+package thread;
+
+import java.util.Scanner;
+
+public class MutiplicationTablewithSleep {
+
+	public static void main(String[] args) throws InterruptedException {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter a number ");
+	int number=sc.nextInt();
+	for(int i=1;i<=10; i++)
+	{
+		Thread.sleep(2000);
+		System.out.println(number+" " + " * "  + i +  " " + " = " + (number*i));
+	}
+	}
+
+}
+output
+--------
+Enter a number 
+6
+6  * 1  = 6
+6  * 2  = 12
+6  * 3  = 18
+6  * 4  = 24
+6  * 5  = 30
+6  * 6  = 36
+6  * 7  = 42
+6  * 8  = 48
+6  * 9  = 54
+6  * 10  = 60
+-----------------------------------------------------------
+date:17/10/2024
+-----------------
+array sorting 
+package thread;
+
+public class Arraysorting {
+
+	public static void main(String[] args) {
+		int l[]= { 2,6,5,4,4,2,6,2};
+		int temp=0;
+		
+		for (int i = 0; i < l.length; i++) {
+			for (int j = i+1; j < l.length; j++) {
+				if (l[i]>l[j]) {
+					temp=l[i];
+					l[i]=l[j];
+					l[j]=temp;
+					
+				}
+				
+				
+			}
+			System.out.print(" "+l[i]);
+			
+		}
+		
+	}
+
+}
+output
+------
+ 2 2 2 4 4 5 6 6
+------------------------------------------------------------------------------------------------
+ThreadClassUsingAnonymousInnerClassrReference:
+
+
+package thread;
+
+public class ThreadClassUsingAnonymousInnerClassrReference{
+	public static void main(String[] args) {
+	System.out.println("main thread");
+	//Thread class using anonymous innerclass reference
+    Thread t=new Thread(){
+
+	@Override
+	public void run() {
+		System.out.println(" Thread anonomyous function ");
+		
+	} 
+	
+};
+t.run();
+t.start();
+
+
+	}
+
+}
+output
+----
+main thread
+ Thread anonomyous function 
+ Thread anonomyous function 
+------------------------------------------------------------------------------------------------------------
+RunnableInterfaceUsingAnonymousFunction:
+-----------------------------------------
+package thread;
+
+public class RunnableInterfaceUsingAnonymousFunction {
+
+	public static void main(String[] args) {
+		System.out.println("main thread started");
+		Runnable r=new Runnable() {
+			
+			@Override
+			public void run() {
+				System.out.println("runnable annonymous");
+				
+			}
+		};
+		Thread t=new Thread(r);
+		t.start();
+		
+	}
+
+}
+output
+------
+main thread started
+runnable annonymous
+-----------------------------------------------------------------------------------------------------------
+RunnableInterfacebyUsingLamdaExpression:
+----------------------------------------
+package thread;
+
+public class  RunnableInterfacebyUsingLamdaExpression {
+
+	public static void main(String[] args) throws InterruptedException {
+		System.out.println("main start");
+		Runnable r=()->System.out.println("thread is running");
+		Thread t=new Thread(r);
+		t.start();
+		t.join();
+		System.out.println("main ended");
+		
+	}
+
+}
+output
+------
+main start
+thread is running
+main ended
+-----------------------------------------------------------------------------------------------------------
+comination of ascending and descending array
+--------------------------------------
+package thread;
+
+public class AescendingArray {
+
+	public static void main(String[] args)
+	{
+		int m[]= {2,-1,3,4,-2,4,-3,2,-4,5};
+		int count=0;
+		int arr[]=new int[5];
+		
+		for(int i=0;i<m.length;i++)
+		{
+			if(m[i]<0)
+			{
+				arr[count++]=m[i];
+			}
+		}
+		
+		for (int i = 0; i < m.length; i++) {
+			for (int j = i+1; j < m.length; j++) {
+				if (m[i]>0 &&  (m[i]>m[j])){
+					
+					int temp1=m[i];
+					m[i]=m[j];
+					m[j]=temp1;
+				}
+				
+			}
+			System.out.print(" "+m[i]);
+		}
+	}
+}
+
+
+output
+------
+ -1 -2 -3 -4 2 2 3 4 4 5
+------------------------------------------------------------------------------------------------
+date:21/10/2024
+---------------
+monday
+--------
+multithreading drawaback with programmatically 
+------------------------------------------
+package thread;
+
+public class Customer implements Runnable {
+	private int available=1;
+	private int wanted;
+	
+
+	public Customer(int wanted) {
+		super();
+		this.wanted = wanted;
+	}
+	@Override
+	public void run(){
+		if(available >=wanted)
+		{
+			String name=Thread.currentThread().getName();
+			System.out.println(wanted+ "seat is reserved :"+name);
+			try {
+				Thread.sleep(500);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			available=available-wanted;
+		}
+		else {
+			System.out.println("sorry birth is not available");
+		}
+		
+
+	}
+}
+	class RailywayReservation
+	{
+	public static void main(String[] args) {
+		
+	Customer c1=new Customer(1);
+	Thread t1=new Thread(c1);
+	Thread t2=new Thread(c1);
+	t1.setName("Ramesh");
+	t2.setName("Rameshgowd");
+	t1.start();
+	t2.start();
+		
+	}
+	}
+output
+--------
+1seat is reserved :Ramesh
+1seat is reserved :Rameshgowd
+-----------------------------------------------------------------------------------------------------------
+date:4/11/2024
+COLLECTION TOPIC BASED
+---------------------
+ARRAYLIST  remove duplicates
+------------------------------
+package duplicates;
+
+import java.util.ArrayList;
+
+public class ArrayListDuplicates {
+	public static void main(String[] args) {
+		
+		
+		ArrayList<Object>al=new ArrayList<Object>();
+		al.add("Ramesh");
+		al.add("Ramesh");
+		al.add("gowd");
+		al.add(3);
+		al.add(3);
+		ArrayList<Object>al1=new ArrayList<Object>();
+		for (int i = 0; i < al.size(); i++) {
+			for (int j = i+1; j < al.size(); j++) {
+				if(al.get(i)==al.get(j))
+				{
+					al1.add(al.get(i));
+				}
+				
+				
+			}
+			 
+			
+		}
+		System.out.println(al1);
+	}
+
+}
+--------------
+output
+------
+[Ramesh, 3]
+-------------------------------------------------------------------------------------------
+ArrayList Sorting
+----------------------
+package Sorting;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class ArrayListSorting{
+	public static void main(String[] args){
+		ArrayList<Integer>al=new ArrayList<>();
+	al.add(2);
+al.add(0);
+al.add(3); 
+  System.out.println("Before sorting: " + al);
+   Collections.sort(al);
+   System.out.println("after   sorting: " + al);
+
+		
+		
+		
+	}
+
+}
+----
+output
+------
+
+Before sorting: [2, 0, 3]
+after   sorting: [0, 2, 3]
+----------------------------------------------------------------------------------------------------------
+
+small project in collection
+---------------------------
+package ExecutionflowArrayListAndVector;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Vector;
+
+public class ExecutionflowArrayListAndVector {
+	public static void main(String[] args) {
+		Vector<Integer>l=new Vector<Integer>();
+		System.out.println("vector started..");
+		 long startTime=System.currentTimeMillis();
+	for(int i=0;i<10000;i++)
+	{
+		l.add(i);
+	}
+	 long endTime=System.currentTimeMillis();
+	 System.out.println("the vector time taken for: "+(endTime-startTime)+"ms");
+	 
+	 ArrayList<Integer>k=new ArrayList<Integer>();
+	 System.out.println("arrayList started...");
+	 long startTime1=System.currentTimeMillis();
+		for(int i=0;i<10000;i++)
+		{
+			k.add(i);
+		}
+		 long endTime1=System.currentTimeMillis();
+		 System.out.println("the arrayList time taken for: "+(endTime1-startTime1)+"ms");
+
+	 }
+
+}
+output
+-----
+vector started..
+the vector time taken for: 3ms
+arrayList started...
+the arrayList time taken for: 2ms
+-------------------------------------------------------------------------------6/11/2024
+wednessday
+--------
+Stack based program
+---------------------
+stack  inside methods
+-----------------------
+package Stack;
+
+import java.util.Stack;
+s
+public class StackClassName {
+	public static void main(String[] args) {
+		Stack<String>k=new Stack<String>();
+		k.push("ramesh");
+		k.push("gowd");
+		k.push("rameshgowd");
+		 System.out.println(k); 
+		System.out.println(k.size());//3
+		System.out.println(k.pop());//rameshgowd
+		System.out.println(k.size());//2
+		System.out.println(k.peek());//gowd
+		k.push("FFF");
+		System.out.println(k); 
+		System.out.println(k.isEmpty());//true
+//		System.out.println(k); 
+	}
+
+}
+------
+output
+-------
+[ramesh, gowd, rameshgowd]
+3
+rameshgowd
+2
+gowd
+[ramesh, gowd, FFF]
+false
+----------------------------------------------------------------------------
+program on hashset
+-------------
+package SetHash;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class SetClass {
+	public static void main(String[] args) {
+		Set<String>s=new HashSet<String>();
+
+	s.add("my");
+		s.add("name");
+		s.add("is");
+	s.add("ramesh");
+		s.add("ramesh");
+		s.add(null);
+		s.add(null);
+//		s.clear();
+		System.out.println(s.add("hhh"));
+		
+		System.out.println(s.remove("is"));
+		System.out.println(s);
+		
+		
+	}
+
+}
+output
+-------
+true
+true
+[null, name, hhh, my, ramesh]
+------------------------------------------------------------------------------------------------
+LinkedHashSet BASED programAll
+---------------------------
+package LinkedHashSetClass;
+
+import java.util.LinkedHashSet;
+
+public class LinkedHashSetExample {
+	public static void main(String[] args) {
+		LinkedHashSet<String> lhs = new LinkedHashSet<>();
+		System.out.println(lhs.add("Nithish"));
+		lhs.add("Ramesh");
+		System.out.println(lhs);
+	}
+}
+output
+---------
+true
+[Nithish, Ramesh]
+-----------------------------------------------------------------------------------------------------
+date:7/11/2024
+thursday
+----
+Comparable interface based program sorting names
+-------------------------------------------------
+package ComparableInterface;
+public class Bike implements Comparable<Bike> {
+private Integer bikeId;
+private String bikeName;
+private Double bikeRate;
+public Bike(Integer bikeId, String bikeName, Double bikeRate) {
+	
+	this.bikeId = bikeId;
+	this.bikeName = bikeName;
+	this.bikeRate = bikeRate;
+}
+public Integer getBikeId() {
+	return bikeId;
+}
+public void setBikeId(Integer bikeId) {
+	this.bikeId = bikeId;
+}
+public String getBikeName() {
+	return bikeName;
+}
+public void setBikeName(String bikeName) {
+	this.bikeName = bikeName;
+}
+public Double getBikeRate() {
+	return bikeRate;
+}
+public void setBikeRate(Double bikeRate) {
+	this.bikeRate = bikeRate;
+}
+@Override
+public String toString() {
+	return "Bike [bikeId=" + bikeId + ", bikeName=" + bikeName + ", bikeRate=" + bikeRate + "]";
+}
+
+@Override
+public int compareTo(Bike o) {
+	
+	return this.bikeName.compareTo(o.getBikeName());
+}
+
+}
+output
+------
+Bike [bikeId=345, bikeName=KTM, bikeRate=20000.0]
+Bike [bikeId=111, bikeName=NS160, bikeRate=10000.0]
+Bike [bikeId=123, bikeName=PULSAR, bikeRate=50000.0]
+-----------------------------------------------------------------------------------
+
+advanced java based program  spring framework  date:     28/11/2024  thursday  
+----------------------------   ---------------
+package com.fi.dependenceclass;
+
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Engine {
+	private  String enginemodel="cccc";
+
+	public String getEnginemodel() {
+		
+		return enginemodel;
+	}
+	
+
+}
+-------
+package com.fi.targetclass;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.fi.dependenceclass.Engine;
+@Component("abc ")
+public class Car {
+	
+	private Engine k;
+@Autowired
+	public void setK(Engine k) {
+		this.k = k;
+	}
+	public void engineInfo()
+	{
+		System.out.println("engine type model"+ k.getEnginemodel());
+
+	}
+}
+-----------------------
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+ 
+    <context:component-scan base-package="com.fi.targetclass,com.fi.dependenceclass"></context:component-scan>
+ 
+</beans>
+   ---------------------
+package com.fi.mainSetterClass;
+
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
+import com.fi.targetclass.Car;
+
+public class TestSetter {
+
+	public static void main(String[] args) {
+		FileSystemXmlApplicationContext ctx=new FileSystemXmlApplicationContext("src/com/fi/config/rameshgowd.xml");
+		Object j=ctx.getBean("abc");
+		Car c=(Car)j;
+	c.engineInfo();
+		ctx.close();
+		
+	}
+
+}
+--------------------------------------
+output
+---------
+engine type modelcccc
+------------------------------------------------------------------------------------------------------
+using constructorinjection
+-------------------------                 date:29/11/2024 Friday:
+                                         --------------------------
+
+package com.fi.targetclass;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.fi.dependenceclass.Engine;
+@Component("abc ")
+public class Car {
+	
+	private Engine k;
+	private Thread l;
+	
+@Autowired
+	public Car(Engine k, Thread l) {
+		super();
+		this.k = k;
+		this.l = l;
+	}
+
+
+	public void engineInfo()
+	{
+		System.out.println("engine type model"+ k.getEnginemodel());
+	 System.out.println(l.currentThread());
+	}
+}
+ ------------------------------------
+package com.fi.dependenceclass;
+
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Engine {
+	private  String enginemodel="cccc";
+
+	public String getEnginemodel() {
+		
+		return enginemodel;
+	}
+	
+
+}
+-------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+ 
+    <context:component-scan base-package="com.fi.targetclass,com.fi.dependenceclass"></context:component-scan>
+    <bean id="rr" class="java.lang.Thread"></bean>
+ 
+</beans>
+   --------------------------------
+package com.fi.mainSetterClass;
+
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
+import com.fi.targetclass.Car;
+
+public class TestSetter {
+
+	public static void main(String[] args) {
+		FileSystemXmlApplicationContext ctx=new FileSystemXmlApplicationContext("src/com/fi/config/rameshgowd.xml");
+		Object j=ctx.getBean("abc");
+		Car c=(Car)j;
+	c.engineInfo();
+		ctx.close();
+		
+	}
+
+}
+output
+--------
+engine type modelcccc
+Thread[#1,main,5,main]
+------------------------------------------------------------------------------------------------------------
